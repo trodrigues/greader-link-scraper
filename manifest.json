@@ -1,0 +1,20 @@
+{
+  "name": "Google Reader Feed Scraper",
+  "version": "0.2",
+  "description": "Scrapes unread items out of Google Reader",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/reader/*"],
+      "js": [ "scraper.js" ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "unlimitedStorage",
+    "*://*.google.com/reader/*"
+  ]
+}
